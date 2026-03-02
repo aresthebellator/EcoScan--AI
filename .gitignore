@@ -1,0 +1,11 @@
+# Ambienti virtuali
+venv/
+.env
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Dati sensibili o database locali
+data/*.db
+logs/
