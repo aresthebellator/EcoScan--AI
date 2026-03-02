@@ -4,7 +4,7 @@ from ai_service import scan_photos
 import os
 
 def main():
-    TOKEN = "8734746238:AAEop0Cyu52vY5Reg9YaDh6rTHF11-dQKsA"
+    TOKEN = ""
 
     app = ApplicationBuilder().token(TOKEN).build()
     app.add_handler(MessageHandler(filters.PHOTO,
