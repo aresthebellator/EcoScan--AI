@@ -131,21 +131,6 @@ python comune_dashboard.py
 
 ---
 
-## 📦 requirements.txt
-
-```
-python-telegram-bot==20.7
-ollama
-python-dotenv
-```
-
-Puoi generarlo automaticamente con:
-
-```bash
-pip freeze > requirements.txt
-```
-
----
 
 ## 🔒 Note di sicurezza
 
