@@ -1,5 +1,5 @@
 from telegram.ext import ApplicationBuilder, MessageHandler, CommandHandler, filters
-from bot import handle_photo, handle_email
+from bot import handle_photo, handle_email,handle_start, handle_comandi
 from ai_service import scan_photos, email_comune
 from dotenv import load_dotenv
 import os
@@ -23,6 +23,10 @@ def main():
     app.add_handler(CommandHandler("email", email_handler))
 
     print("Il bot è stato avviato e l'IA è pronta...")
+    app.add_handler(CommandHandler("start",handle_start))
+    app.add_handler(CommandHandler("comandi",handle_comandi))
+    app.add_handler(MessageHandler(filters.PHOTO, photo_handler))
+    
     app.run_polling()
 
 if __name__ == "__main__":
