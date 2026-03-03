@@ -3,6 +3,7 @@ from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 import os
 
 async def handle_photo(update: Update, context: ContextTypes.DEFAULT_TYPE, ia_function):
+    await update.message.reply_text("Sto scannerizzando l'immagine")
     photo = update.message.photo[-1]
     file = await context.bot.get_file(photo.file_id)
     path = f"{photo.file_id}.jpg"
