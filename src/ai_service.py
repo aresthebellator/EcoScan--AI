@@ -40,7 +40,7 @@ def scan_photos(image_path, user_comment=""):
             image_data = f.read()
 
         response = ollama.chat(
-            model='llava',
+            model='llava3.2-vision',
             messages=[
                 {'role': 'system', 'content': system_instructions},
                 {
@@ -56,7 +56,7 @@ def scan_photos(image_path, user_comment=""):
         
         if "MASSIMA" in risposta.upper():
             verifica = ollama.chat(
-                model='llava',
+                model='llava3.2-vision',
                 messages=[
                     {
                         'role': 'user',
