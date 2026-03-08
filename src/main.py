@@ -41,7 +41,8 @@ def main():
     app.add_handler(foto_conv)
     app.add_handler(email_conv)
 
-    print("Il bot è stato avviato e l'IA è pronta...")
+    print("Il bot è stato avviato e l'IA è pronta...\n")
+    print("Puoi avviare il programma comune_dashboard")
     app.run_polling()
 
 if __name__ == "__main__":
